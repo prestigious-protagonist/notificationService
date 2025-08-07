@@ -31,8 +31,8 @@ io.on('connection', (socket) => {
   });
 });
 
-app.use('/routes', router);
-app.get('/', (req, res) => res.send('WebSocket Server Running'));
+app.use('/notificationService/routes', router);
+app.get('/notificationService', (req, res) => res.send('WebSocket Server Running'));
 
 server.listen(3007, () => {
   console.log('🔔 Notification WebSocket service running on port 3007');
